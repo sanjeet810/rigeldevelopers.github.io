@@ -1,2 +1,2 @@
 # rigeldevelopers.github.io
-this is just of testing purpose as of now I am learning how to use github.
+this is just for testing purpose as of now I am learning how to use github.
