@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildheist-App</title>
+    <link rel="stylesheet" href="/b-app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="left-side">
+                <div class="heading">
+                    <div class="exit">
+                        <a href="/project.html"><img src="/Rigel png/Services/Android/Back.png" alt="Exit"></a>
+                    </div>
+                    <div class="line"></div>
+                    <div class="head-text">
+                        <h1 id="h">Bildheist-App</h1>
+                    </div>
+                </div>
+                <div class="head-para">
+                    <p id="para">This is an Educational Application. Users can download,read pdfs,Images and other docs
+                        Uploaded by Admin.
+                    </p>
+                    <h4>Color Pellete</h4>
+
+                    <div class="pellete">
+                        <div class="pellete1">
+                            <div class="color"></div>
+                            <div class="hex-code">
+                                <span>#1364AD</span>
+                            </div>
+                        </div>
+                        <div class="pellete2">
+                            <div class="color"></div>
+                            <div class="hex-code">
+                                <span>#006D7E</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <span>Font Family</span>
+                        <p>-Montserrat </p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="left-btn">
+                    <button class="btn" onClick="back()"><img
+                            src="/Rigel png/Services/Android/Project/Left  arrow.png"></button>
+                </div>
+                <div class="mobile">
+                    <img src="/Rigel png/Services/Android/Project/Mobile.png" alt="mobile-img">
+                </div>
+                <div class="main-img">
+                    <img src="/projects-img/Buildheist/Home.png" alt="img" id="mainImg">
+                </div>
+                <div class="right-btn">
+                    <button class="btn" onClick="next()"><img src="/Rigel png/Services/Android/Project/Right arrow.png"
+                            alt="right"></button>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <a href="/FIL.html" ><button>Previous project</button></a>
+            <a href="/news.html"><button>Next project</button></a> 
+        </div>
+    </div>
+
+    <script>
+        var array = ['Home Page','Loading Screen',  'Menu', 'Downloaded files'];
+        var cpt = 0;
+        var aboutArray = ['This is home page of Application','This Loading Page of our application.', 'Here You Can Download the latest study Materials and also can view your downloded files.', 'Here You can get your all downloaded files. '];
+        var text = 0;
+
+        var myImg = document.getElementById('mainImg');
+        var array2 = ["/projects-img/Buildheist/Home.png","/projects-img/Buildheist/Loading.png", "/projects-img/Buildheist/Menu.png",  "/projects-img/Buildheist/My files.png"];
+        var imgIndex = 0;
+        function next() {
+
+            if (cpt < array.length - 1) {
+                cpt++;
+            }
+            else {
+                cpt = 3;
+            }
+            document.querySelector("#h").innerHTML = array[cpt];
+
+            if (text < aboutArray.length - 1)
+                text++;
+            else
+                text = 3;
+            document.querySelector("#para").innerHTML = aboutArray[text];
+
+            if (imgIndex < array2.length - 1) {
+                imgIndex++;
+            }
+            else {
+                imgIndex = 3;
+            }
+            myImg.setAttribute("src", array2[imgIndex]);
+        }
+        function back() {
+            if (cpt < array.length + 1) {
+                cpt--;
+            }
+            else {
+                cpt = 3;
+            }
+            document.querySelector("#h").innerHTML = array[cpt];
+            if (text < aboutArray.length + 1)
+                text--;
+            else
+                text = 3;
+            document.querySelector("#para").innerHTML = aboutArray[text];
+
+            if (imgIndex < array2.length + 1) {
+                imgIndex--;
+            }
+            else {
+                imgIndex = 3;
+            }
+            myImg.setAttribute("src", array2[imgIndex]);
+        }
+
+    </script>
+</body>
+
+</html>

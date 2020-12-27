@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEWS</title>
+  <link rel="stylesheet" href="/news.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="container">
+      <div class="left-side">
+        <div class="heading">
+          <div class="exit">
+            <a href="/project.html"><img src="/Rigel png/Services/Android/Back.png" alt="Exit"></a>
+          </div>
+          <div class="line"></div>
+          <div class="head-text">
+            <h1 id="h">NEW 24*7</h1>
+          </div>
+        </div>
+        <div class="head-para">
+            <p id="para">This is a NEWS Application. Where you can find news related 
+              to every field. You can also set preferences as per your choice. It supports multi-language.
+              </p>  
+              <h4>Color Pellete</h4>
+
+          <div class="pellete">
+            <div class="pellete1">
+              <div class="color"></div>
+              <div class="hex-code">
+                <span>#1D1D1D</span>
+              </div>
+            </div>
+            <div class="pellete2">
+              <div class="color"></div>
+              <div class="hex-code">
+                <span>#CF136D</span>
+              </div>
+            </div>
+            <div class="pellete3">
+              <div class="color"></div>
+              <div class="hex-code">
+                <span>#FF0003</span>
+              </div>
+          </div>
+          <div class="pellete4">
+            <div class="color"></div>
+            <div class="hex-code">
+              <span>#1A4BD0</span>
+            </div>
+        </div>
+        </div>
+          <div class="details">
+            <span>Font Family</span>
+            <p>-Segoe UI</p>
+          </div>
+    </div>
+      </div>
+      <div class="right-side">
+        <div class="left-btn">
+          <button class="btn" onClick="back()"><img src="/Rigel png/Services/Android/Project/Left  arrow.png"></button>
+        </div>
+        <div class="mobile">
+          <img src="/Rigel png/Services/Android/Project/Mobile.png" alt="mobile-img">
+        </div>
+        <div class="main-img">
+          <img src="/projects-img/NEWS/Home.png" alt="img"  id="mainImg">
+        </div>
+        <div class="right-btn">
+          <button class="btn" onClick="next()"><img src="/Rigel png/Services/Android/Project/Right arrow.png" alt="right"></button>
+        </div>
+      </div>
+    </div>
+    <div class="button">
+      <a href="/b-app.html" ><button>Previous project</button></a>
+      <a href="/school.html" ><button>Next project</button></a> 
+    </div>
+  </div>
+
+  <script>
+    var array = ['Hom page', 'Login Page', 'Your Interest', 'NEWS Feed', 'Settings'];
+    var cpt = 0;
+    var aboutArray = ['This is home page of news Ap', 'This is login page for NEWS App', 'Here You can select News prefrences,which will be shown to you in News Feed section',
+        'Your all news will be displayed here of your Interests. ', 'Here You can make Chnages in setting of Application.'];
+    var text = 0;
+   
+    var myImg = document.getElementById('mainImg');
+    var array2 = ["/projects-img/NEWS/Home.png","/projects-img/NEWS/Login.png", "/projects-img/NEWS/Interests.png", "/projects-img/NEWS/Feed.png", "/projects-img/NEWS/Settings.png"];
+    var imgIndex = 0;
+    function next() {
+       
+        if (cpt < array.length - 1) {
+            cpt++;
+        }
+        else {
+            cpt = 4;
+        }
+        document.querySelector("#h").innerHTML = array[cpt];
+
+        if (text < aboutArray.length - 1)
+            text++;
+        else
+            text = 4;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+        if(imgIndex<array2.length-1){
+            imgIndex++;
+        }
+        else{
+            imgIndex=4;
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+    }
+    function back(){
+        if (cpt < array.length + 1) {
+            cpt--;
+        }
+        else {
+            cpt = 4;
+        }
+        document.querySelector("#h").innerHTML = array[cpt];
+        if (text < aboutArray.length + 1)
+            text--;
+        else
+            text = 4;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+        if(imgIndex<array2.length + 1){
+            imgIndex--;
+        }
+        else{
+            imgIndex=4;
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+        }
+    
+</script>
+</body>
+
+</html>
