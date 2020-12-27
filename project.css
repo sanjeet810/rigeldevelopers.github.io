@@ -149,12 +149,18 @@ font-size: 5vw;
   font-size: 5vw;
 }
 
-#school span{
+#school span,#bildheist span{
  text-align: center;
 }
 .swiper-slide:hover .info {
   font-size: 4vw;
   padding-bottom: 1rem;
+}
+.swiper-slide .info img {
+  text-align: center;
+  width: 25%;
+  height: 20%;
+  margin-left: 30%;
 }
 }
 
