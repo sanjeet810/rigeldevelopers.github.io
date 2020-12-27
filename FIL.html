@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIL</title>
+  <link rel="stylesheet" href="/FIL.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="container">
+      <div class="left-side">
+        <div class="heading">
+          <div class="exit">
+            <a href="#"><img src="/Rigel png/Services/Android/Back.png" alt="Exit"></a>
+          </div>
+          <div class="line"></div>
+          <div class="head-text">
+            <h1 id="h">FIL-Fall in Love</h1>
+          </div>
+        </div>
+        <p id="para">This is an admin panel, Where Admin can upload their notes,pdfs and other study materials and
+          users can access it by its application. Admin can see list of all users and can manage them.
+          there is also list of expired users.
+          It's contents are protected from screen recording and screenshots.
+        </p>
+        <div class="color-pellete">
+          <h4>Color Pellete</h4>
+          <div class="pellete">
+            <div class="Dark">
+              <div class="color"></div>
+              <div class="hex-code">
+                <span>#FFA153</span>
+              </div>
+            </div>
+            <div class="light">
+              <div class="color"></div>
+              <div class="hex-code">
+                <span>#CF136D</span>
+              </div>
+            </div>
+            <div class="gray">
+              <div class="color"></div>
+              <div class="hex-code">
+                <span>#222222</span>
+              </div>
+            </div>
+          </div>
+          <div class="details">
+            <span>Font Family</span>
+            <p>-Raleway</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="left-btn">
+          <button class="btn" onClick="back()"><img src="/Rigel png/Services/Android/Project/Left  arrow.png"></button>
+        </div>
+        <div class="mobile">
+          <img src="/Rigel png/Services/Android/Project/Mobile.png" alt="mobile-img">
+        </div>
+        <div class="main-img">
+          <img src="/projects-img/FIL/Home.png" alt="img"  id="mainImg">
+        </div>
+        <div class="right-btn">
+          <button class="btn" onClick="next()"><img src="/Rigel png/Services/Android/Project/Right arrow.png" alt="right"></button>
+        </div>
+      </div>
+    </div>
+    <div class="button">
+      <button>Previous project</button>
+      <button>Next project</button>
+    </div>
+  </div>
+
+  <script>
+    var array = ['Home', 'login', 'profile', 'Discover', 'Chatting'];
+    var cpt = 0;
+    var aboutArray = ['this is home page', 'this login page', 'here u can view your profile',
+        'u can find new peoples', 'your chatting window'];
+    var text = 0;
+   
+    var myImg = document.getElementById('mainImg');
+    var array2 = ["/projects-img/FIL/Home.png","/projects-img/FIL/Login.png", "/projects-img/FIL/Profile.png", "/projects-img/FIL/Discover.png", "/projects-img/FIL/Chat.png"];
+    var imgIndex = 0;
+    function next() {
+       
+        if (cpt < array.length - 1) {
+            cpt++;
+        }
+        else {
+            cpt = 4;
+        }
+        document.querySelector("#h").innerHTML = array[cpt];
+
+        if (text < aboutArray.length - 1)
+            text++;
+        else
+            text = 4;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+        if(imgIndex<array2.length-1){
+            imgIndex++;
+        }
+        else{
+            imgIndex=4;
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+    }
+    function back(){
+        if (cpt < array.length + 1) {
+            cpt--;
+        }
+        else {
+            cpt = 4;
+        }
+        document.querySelector("#h").innerHTML = array[cpt];
+        if (text < aboutArray.length + 1)
+            text--;
+        else
+            text = 4;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+        if(imgIndex<array2.length + 1){
+            imgIndex--;
+        }
+        else{
+            imgIndex=4;
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+        }
+    
+</script>
+</body>
+
+</html>

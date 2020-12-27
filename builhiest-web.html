@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bildheist</title>
+  <link rel="stylesheet" href="/bildhist.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="container">
+      <div class="left-side">
+        <div class="heading">
+          <div class="exit">
+            <a href="#"><img src="/Rigel png/Services/Android/Back.png" alt="Exit"></a>
+          </div>
+          <div class="line"></div>
+          <div class="head-text">
+            <h1>Bildheist</h1>
+            <p>This is an admin panel, Where Admin can upload their notes,pdfs and other study materials and 
+              users can access it by its application. Admin can see  list of all users and can manage them.
+              there is also list of expired users. 
+              It's contents are protected from screen recording and screenshots.
+            </p>
+          </div>
+        </div>
+        <h4>Color Pellete</h4>
+        <div class="color-pellete">
+          <div class="blue">
+            <div class="color"></div>
+            <div class="hex-code">
+              <span>#1364ad</span>
+            </div>  
+          </div>
+          <div class="green">
+            <div class="color"></div>
+            <div class="hex-code">
+              <span>#006d7e</span>
+            </div>  
+          </div>
+        <div class="details">
+          <span>Font Family</span>
+          <p>-Montserrat</p>
+        </div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="tv">
+          <img src="/Rigel png/Services/Website,Webapp/TV.png" alt="">
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container" id="cont">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="/projects-img/Welcome.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="/projects-img/Login.png" alt=""></div>
+            <div class="swiper-slide"><img src="/projects-img/Home.png" alt=""></div>
+            <div class="swiper-slide"><img src="/projects-img/Upload File.png" alt=""></div>
+            <div class="swiper-slide"><img src="/projects-img/View Files.png" alt=""></div>
+            <div class="swiper-slide"><img src="/projects-img/View Users.png" alt=""></div>
+            <div class="swiper-slide"><img src="/projects-img/View Active Accounts.png" alt=""></div>
+
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+        
+    </div>
+    <div class="button">
+      <button>Previous project</button>
+      <button>Next project</button>
+    </div>
+  </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            loop: true,
+            grabCursor: true,
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          });
+        </script>
+</body>
+
+</html>
