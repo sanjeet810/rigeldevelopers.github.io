@@ -28,9 +28,9 @@
                     <p id="para">This is an Educational Application. Users can download,read pdfs,Images and other docs
                         Uploaded by Admin.
                     </p>
-                    <h4>Color Pellete</h4>
+                    <h4 id="c_pellete">Color Pellete</h4>
 
-                    <div class="pellete">
+                    <div class="pellete"  id="pellete">
                         <div class="pellete1">
                             <div class="color"></div>
                             <div class="hex-code">
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="details">
+                    <div class="details" id="details">
                         <span>Font Family</span>
                         <p>-Montserrat </p>
                     </div>
@@ -83,52 +83,67 @@
         var array2 = ["/projects-img/Buildheist/Home.png","/projects-img/Buildheist/Loading.png", "/projects-img/Buildheist/Menu.png",  "/projects-img/Buildheist/My files.png"];
         var imgIndex = 0;
         function next() {
-
-            if (cpt < array.length - 1) {
-                cpt++;
-            }
-            else {
-                cpt = 3;
-            }
-            document.querySelector("#h").innerHTML = array[cpt];
-
-            if (text < aboutArray.length - 1)
-                text++;
-            else
-                text = 3;
-            document.querySelector("#para").innerHTML = aboutArray[text];
-
-            if (imgIndex < array2.length - 1) {
-                imgIndex++;
-            }
-            else {
-                imgIndex = 3;
-            }
-            myImg.setAttribute("src", array2[imgIndex]);
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+    
+        if (cpt < array.length - 1) {
+            cpt++;
         }
-        function back() {
-            if (cpt < array.length + 1) {
-                cpt--;
-            }
-            else {
-                cpt = 3;
-            }
-            document.querySelector("#h").innerHTML = array[cpt];
-            if (text < aboutArray.length + 1)
-                text--;
-            else
-                text = 3;
-            document.querySelector("#para").innerHTML = aboutArray[text];
+        else {
+            cpt = 0;
+            
+              document.getElementById('pellete').style.visibility="visible";
+              document.getElementById('c_pellete').style.visibility="visible";
+              document.getElementById('details').style.visibility="visible";
+        }
+        document.querySelector("#h").innerHTML = array[cpt];
 
-            if (imgIndex < array2.length + 1) {
-                imgIndex--;
-            }
-            else {
-                imgIndex = 3;
-            }
-            myImg.setAttribute("src", array2[imgIndex]);
+        if (text < aboutArray.length - 1)
+            text++;
+        else
+            text = 0;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+        if(imgIndex<array2.length-1){
+            imgIndex++;
+        }
+        else{
+            imgIndex=0;
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+    }
+    function back(){       
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+        if (cpt < array.length - 1) {
+            cpt++;
+        }
+        else {
+            cpt = 0;
         }
 
+        document.querySelector("#h").innerHTML = array[cpt];
+        if (text < aboutArray.length - 1)
+            text++;
+        else
+            text = 0;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+
+        console.log('img number',imgIndex);
+        if(imgIndex<array2.length-1){
+            imgIndex++;
+        }
+        else{
+            imgIndex=0;
+            document.getElementById('pellete').style.visibility="visible";
+            document.getElementById('c_pellete').style.visibility="visible";
+            document.getElementById('details').style.visibility="visible";
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+        }
     </script>
 </body>
 
