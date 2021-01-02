@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <div class="main-container">
     <div class="container">
@@ -25,14 +24,15 @@
           </div>
         </div>
         <div class="head-para">
-            <p id="para">This is a Dating Appication, Where You can find your mates and chat with them,
+            <p id="para" >This is a Dating Appication, Where You can find your mates and chat with them,
                  It's completely secure and Confidential.
               </p>  
-              <h4>Color Pellete</h4>
+            
+              <h4 id="c_pellete">Color Pellete</h4>
 
-          <div class="pellete">
+          <div class="pellete" id="pellete">
             <div class="pellete1">
-              <div class="color"></div>
+              <div class="color" ></div>
               <div class="hex-code">
                 <span>#FFA153</span>
               </div>
@@ -50,7 +50,7 @@
               </div>
           </div>
         </div>
-          <div class="details">
+          <div class="details" id="details">
             <span>Font Family</span>
             <p>-Raleway</p>
           </div>
@@ -58,7 +58,7 @@
       </div>
       <div class="right-side">
         <div class="left-btn">
-          <button class="btn" onClick="back()"><img src="/Rigel png/Services/Android/Project/Left  arrow.png"></button>
+          <button class="btn" id="btn1" onClick="back()"><img src="/Rigel png/Services/Android/Project/Left  arrow.png"></button>
         </div>
         <div class="mobile">
           <img src="/Rigel png/Services/Android/Project/Mobile.png" alt="mobile-img">
@@ -72,13 +72,13 @@
       </div>
     </div>
     <div class="button">
-     <a href="/builhiest-web.html" ><button>Previous project</button></a>
+      <a href="/builhiest-web.html" ><button>Previous project</button></a>
       <a href="/b-app.html" ><button>Next project</button></a> 
     </div>
   </div>
 
   <script>
-    var array = ['Home', 'login', 'profile', 'Discover', 'Chatting'];
+    var array = ['Home', 'Login page', 'Profile', 'Discover', 'Chatting Window'];
     var cpt = 0;
     var aboutArray = ['this is home page', 'this login page', 'here u can view your profile',
         'u can find new peoples', 'your chatting window'];
@@ -88,48 +88,64 @@
     var array2 = ["/projects-img/FIL/Home.png","/projects-img/FIL/Login.png", "/projects-img/FIL/Profile.png", "/projects-img/FIL/Discover.png", "/projects-img/FIL/Chat.png"];
     var imgIndex = 0;
     function next() {
-       
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+    
         if (cpt < array.length - 1) {
             cpt++;
         }
         else {
-            cpt = 4;
+            cpt = 0;
+            
+              document.getElementById('pellete').style.visibility="visible";
+              document.getElementById('c_pellete').style.visibility="visible";
+              document.getElementById('details').style.visibility="visible";
         }
         document.querySelector("#h").innerHTML = array[cpt];
 
         if (text < aboutArray.length - 1)
             text++;
         else
-            text = 4;
+            text = 0;
         document.querySelector("#para").innerHTML = aboutArray[text];
 
         if(imgIndex<array2.length-1){
             imgIndex++;
         }
         else{
-            imgIndex=4;
+            imgIndex=0;
         }
         myImg.setAttribute("src", array2[imgIndex]);
     }
-    function back(){
-        if (cpt < array.length + 1) {
-            cpt--;
+    function back(){       
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+        if (cpt < array.length - 1) {
+            cpt++;
         }
         else {
-            cpt = 4;
+            cpt = 0;
         }
+
         document.querySelector("#h").innerHTML = array[cpt];
-        if (text < aboutArray.length + 1)
-            text--;
+        if (text < aboutArray.length - 1)
+            text++;
         else
-            text = 4;
+            text = 0;
         document.querySelector("#para").innerHTML = aboutArray[text];
 
-        if(imgIndex<array2.length + 1){
-            imgIndex--;
+
+        console.log('img number',imgIndex);
+        if(imgIndex<array2.length-1){
+            imgIndex++;
         }
         else{
-            imgIndex=4;
+            imgIndex=0;
+            document.getElementById('pellete').style.visibility="visible";
+            document.getElementById('c_pellete').style.visibility="visible";
+            document.getElementById('details').style.visibility="visible";
         }
         myImg.setAttribute("src", array2[imgIndex]);
         }
