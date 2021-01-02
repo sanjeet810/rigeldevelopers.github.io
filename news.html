@@ -28,9 +28,9 @@
             <p id="para">This is a NEWS Application. Where you can find news related 
               to every field. You can also set preferences as per your choice. It supports multi-language.
               </p>  
-              <h4>Color Pellete</h4>
+              <h4 id="c_pellete">Color Pellete</h4>
 
-          <div class="pellete">
+          <div class="pellete" id="pellete">
             <div class="pellete1">
               <div class="color"></div>
               <div class="hex-code">
@@ -56,7 +56,7 @@
             </div>
         </div>
         </div>
-          <div class="details">
+          <div class="details" id="details">
             <span>Font Family</span>
             <p>-Segoe UI</p>
           </div>
@@ -84,58 +84,74 @@
   </div>
 
   <script>
-    var array = ['Hom page', 'Login Page', 'Your Interest', 'NEWS Feed', 'Settings'];
+    var array = ['Home page', 'Login Page', 'Your Interest', 'NEWS Feed', 'Settings'];
     var cpt = 0;
-    var aboutArray = ['This is home page of news Ap', 'This is login page for NEWS App', 'Here You can select News prefrences,which will be shown to you in News Feed section',
+    var aboutArray = ['This is home page of news App', 'This is login page for NEWS App', 'Here You can select News prefrences,which will be shown to you in News Feed section',
         'Your all news will be displayed here of your Interests. ', 'Here You can make Chnages in setting of Application.'];
     var text = 0;
    
     var myImg = document.getElementById('mainImg');
     var array2 = ["/projects-img/NEWS/Home.png","/projects-img/NEWS/Login.png", "/projects-img/NEWS/Interests.png", "/projects-img/NEWS/Feed.png", "/projects-img/NEWS/Settings.png"];
     var imgIndex = 0;
-    function next() {
-       
+      function next() {
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+    
         if (cpt < array.length - 1) {
             cpt++;
         }
         else {
-            cpt = 4;
+            cpt = 0;
+            
+              document.getElementById('pellete').style.visibility="visible";
+              document.getElementById('c_pellete').style.visibility="visible";
+              document.getElementById('details').style.visibility="visible";
         }
         document.querySelector("#h").innerHTML = array[cpt];
 
         if (text < aboutArray.length - 1)
             text++;
         else
-            text = 4;
+            text = 0;
         document.querySelector("#para").innerHTML = aboutArray[text];
 
         if(imgIndex<array2.length-1){
             imgIndex++;
         }
         else{
-            imgIndex=4;
+            imgIndex=0;
         }
         myImg.setAttribute("src", array2[imgIndex]);
     }
-    function back(){
-        if (cpt < array.length + 1) {
-            cpt--;
+    function back(){       
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+        if (cpt < array.length - 1) {
+            cpt++;
         }
         else {
-            cpt = 4;
+            cpt = 0;
         }
+
         document.querySelector("#h").innerHTML = array[cpt];
-        if (text < aboutArray.length + 1)
-            text--;
+        if (text < aboutArray.length - 1)
+            text++;
         else
-            text = 4;
+            text = 0;
         document.querySelector("#para").innerHTML = aboutArray[text];
 
-        if(imgIndex<array2.length + 1){
-            imgIndex--;
+
+        console.log('img number',imgIndex);
+        if(imgIndex<array2.length-1){
+            imgIndex++;
         }
         else{
-            imgIndex=4;
+            imgIndex=0;
+            document.getElementById('pellete').style.visibility="visible";
+            document.getElementById('c_pellete').style.visibility="visible";
+            document.getElementById('details').style.visibility="visible";
         }
         myImg.setAttribute("src", array2[imgIndex]);
         }
