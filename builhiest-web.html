@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bildheist</title>
+  <title>Bildhiest-website</title>
   <link rel="stylesheet" href="/bildhist.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
-
 <body>
   <div class="main-container">
     <div class="container">
@@ -20,75 +20,131 @@
           </div>
           <div class="line"></div>
           <div class="head-text">
-            <h1>Bildheist</h1>
-            <p>This is an admin panel, Where Admin can upload their notes,pdfs and other study materials and 
-              users can access it by its application. Admin can see  list of all users and can manage them.
-              there is also list of expired users. 
-              It's contents are protected from screen recording and screenshots.
-            </p>
+            <h1 id="h">Bildhiest-website</h1>
           </div>
         </div>
-        <h4>Color Pellete</h4>
-        <div class="color-pellete">
-          <div class="blue">
-            <div class="color"></div>
-            <div class="hex-code">
-              <span>#1364ad</span>
-            </div>  
+        <div class="head-para">
+            <p id="para">This is an admin panel, Where Admin can upload their notes,pdfs and other study materials and 
+                users can access it by its application. Admin can see  list of all users and can manage them.
+                there is also list of expired users. 
+                It's contents are protected from screen recording and screenshots.
+              </p>  
+              <h4 id="c_pellete">Color Pellete</h4>
+              <div class="pellete" id="pellete">
+                <div class="pellete1">
+                    <div class="color"></div>
+                    <div class="hex-code">
+                        <span>#1364AD</span>
+                    </div>
+                </div>
+                <div class="pellete2">
+                    <div class="color"></div>
+                    <div class="hex-code">
+                        <span>#006D7E</span>
+                    </div>
+                </div>
+            </div>
+          <div class="details" id="details">
+            <span>Font Family</span>
+            <p>-Montserrat</p>
           </div>
-          <div class="green">
-            <div class="color"></div>
-            <div class="hex-code">
-              <span>#006d7e</span>
-            </div>  
-          </div>
-        <div class="details">
-          <span>Font Family</span>
-          <p>-Montserrat</p>
+    </div>
+      </div>
+      <div class="right-side">
+        <div class="left-btn">
+          <button class="btn" onClick="back()"><img src="/Rigel png/Services/Android/Project/Left  arrow.png"></button>
         </div>
+        <div class="mobile">
+          <img src="/Rigel png/Services/Website,Webapp/TV.png" alt="Tv-img">
+        </div>
+        <div class="main-img">
+          <img src="/projects-img/b-web/Welcome.jpg" alt="img"  id="mainImg">
+        </div>
+        <div class="right-btn">
+          <button class="btn" onClick="next()"><img src="/Rigel png/Services/Android/Project/Right arrow.png" alt="right"></button>
         </div>
       </div>
-      <div class="main">
-        <div class="tv">
-          <img src="/Rigel png/Services/Website,Webapp/TV.png" alt="">
-        </div>
-        <!-- Swiper -->
-        <div class="swiper-container" id="cont">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="/projects-img/Welcome.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="/projects-img/Login.png" alt=""></div>
-            <div class="swiper-slide"><img src="/projects-img/Home.png" alt=""></div>
-            <div class="swiper-slide"><img src="/projects-img/Upload File.png" alt=""></div>
-            <div class="swiper-slide"><img src="/projects-img/View Files.png" alt=""></div>
-            <div class="swiper-slide"><img src="/projects-img/View Users.png" alt=""></div>
-            <div class="swiper-slide"><img src="/projects-img/View Active Accounts.png" alt=""></div>
-
-          </div>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-        </div>
-        
     </div>
     <div class="button">
-    <a href="/school.html" ><button>Previous project</button></a>
-    <a href="/FIL.html"><button>Next project</button></a>  
+      <a href="/school.html" ><button>Previous project</button></a>
+      <a href="/FIL.html" ><button>Next project</button></a> 
     </div>
   </div>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <!-- Initialize Swiper -->
-        <script>
-          var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            grabCursor: true,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          });
-        </script>
+
+  <script>
+    var array = ['Welcome', 'Login page','Home page', 'Users page', 'All uploaded files'];
+    var cpt = 0;
+    var aboutArray = ['Welcome to our website.','This is Login page for Admin. Admin can also Reset password.', 'This is Home page from here You upload,View Files and View All Users.', 'Here you can find all Active and Expired Users.',
+        'Here you can manage All the uploaded Documents.'];
+    var text = 0;
+   
+    var myImg = document.getElementById('mainImg');
+    var array2 = ["/projects-img/b-web/Welcome.jpg", "/projects-img/b-web/Login.png", "/projects-img/b-web/Home.png","/projects-img/b-web/View Users.png", "/projects-img/b-web/View Files.png"];
+    var imgIndex = 0;
+    function next() {
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+    
+        if (cpt < array.length - 1) {
+            cpt++;
+        }
+        else {
+            cpt = 0;
+            
+              document.getElementById('pellete').style.visibility="visible";
+              document.getElementById('c_pellete').style.visibility="visible";
+              document.getElementById('details').style.visibility="visible";
+        }
+        document.querySelector("#h").innerHTML = array[cpt];
+
+        if (text < aboutArray.length - 1)
+            text++;
+        else
+            text = 0;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+        if(imgIndex<array2.length-1){
+            imgIndex++;
+        }
+        else{
+            imgIndex=0;
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+    }
+    function back(){       
+      document.getElementById('c_pellete').style.visibility="hidden";
+      document.getElementById('pellete').style.visibility="hidden";
+      document.getElementById('details').style.visibility="hidden";
+        if (cpt < array.length - 1) {
+            cpt++;
+        }
+        else {
+            cpt = 0;
+        }
+
+        document.querySelector("#h").innerHTML = array[cpt];
+        if (text < aboutArray.length - 1)
+            text++;
+        else
+            text = 0;
+        document.querySelector("#para").innerHTML = aboutArray[text];
+
+
+        console.log('img number',imgIndex);
+        if(imgIndex<array2.length-1){
+            imgIndex++;
+        }
+        else{
+            imgIndex=0;
+            document.getElementById('pellete').style.visibility="visible";
+            document.getElementById('c_pellete').style.visibility="visible";
+            document.getElementById('details').style.visibility="visible";
+        }
+        myImg.setAttribute("src", array2[imgIndex]);
+        }
+    
+</script>
 </body>
 
 </html>
