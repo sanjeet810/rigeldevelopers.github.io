@@ -205,7 +205,7 @@ nav ul li:hover {
 	width: 28%;
 	height: 98%;
 	text-align: center;
-	box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 7px 7px 5px 0px rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 	margin: 2%;
 	position: relative;
@@ -294,6 +294,7 @@ nav ul li:hover {
 	}
 	.left-box{
 		width: 50%;
+		height: 50vh;
 		background: linear-gradient(to right,#a50a0a,#640314);
 		color:white;
 		border-bottom-right-radius: 35px;
@@ -305,6 +306,7 @@ nav ul li:hover {
 	}
 	.right-box{
 		width: 50%; 
+		height: 50vh;
 		background: linear-gradient(to right,#640314,#a50a0a);
 		 display: flex;
 		 flex-direction:column;
@@ -317,18 +319,18 @@ nav ul li:hover {
 	}
 	.contact-details span{
 		color:#10ec10;
-		font-size:22px;
+		font-size:4vh;
 		text-transform: uppercase;
 		font-weight:400;
 		
 	}
 	.contact-details p{
 	padding-bottom: 1rem;
-	font-size:1.5rem;
+	font-size:3.5vh;
 	}
 input[type="text"]{
 width: 90%;
-height:2rem;
+height:6vh;
 outline: none;
 border-bottom-right-radius: 8px;
 border-top-right-radius: 8px;
@@ -339,7 +341,7 @@ box-shadow: 9px 5px 5px 0px rgba(0, 0, 0, 0.75);
 }
 input[type="email"]{
 	width: 90%;
-	height:2rem;
+	height:6vh;
 	outline: none;
 	border-bottom-right-radius: 8px;
 	border-top-right-radius: 8px;
@@ -349,7 +351,7 @@ input[type="email"]{
 	}
 	textarea{
 	width: 90%;
-	height:3rem;
+	height:8vh;
 	outline: none;
 	border-bottom-right-radius: 8px;
 	border-top-right-radius: 8px;
@@ -367,7 +369,7 @@ input[type="email"]{
 		outline: none;
 		border: none;
 		border-radius:50px;
-		margin-top: 2rem;
+		margin-top: 4vh;
 		cursor:pointer;
 		color:#FFF;
 		font-size:1rem;
@@ -453,9 +455,6 @@ input[type="email"]{
 	animation-duration: 10s
 }
 
-
-
-
 .box-area li:nth-child(7) {
 	left: 15%;
 	width: 90px;
@@ -507,9 +506,6 @@ input[type="email"]{
 		opacity: 0;
 	}
 }
-
-
-
 
 
 @media screen and (max-width:760px){
@@ -723,6 +719,7 @@ input[type="email"]{
 	}
 	 .left-box{
 		 width: 75%;
+		 height: auto;
 		 margin-bottom:5%;
 		 margin-right:0;
 	 }
@@ -732,6 +729,7 @@ input[type="email"]{
 	 }
 	 .right-box{
 		width: 70%;
+		height: auto;
 		padding: 2.5vw 7.5vw;	
 	 }
 
@@ -784,7 +782,7 @@ input[type="email"]{
 	  margin:3% 2%;
   }
   .text h2,.text h3{
-	  font-size: 5vw;
+ font-size: 2.6rem;
   }
 }
  
