@@ -112,24 +112,25 @@ cursor: pointer;
   width: 2rem;
 }
 .mobile {
-    width: 25rem;
-    height: 30rem;
-    
+  width: 60%;
+  height: 100%;
+  
 }
 .mobile img {
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    position: relative;
-  }
-  .main-img img{
-    width: 15.5rem;
-    height: 27.5rem;
-    top:-0.2rem;
-    left: 12.5rem;
-    position: absolute;
-    border-radius: 2rem;
-  }
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: relative;
+}
+.main-img img{
+  width:38%;
+  height:93%;
+  top:3%;
+  left:31%;
+  position: absolute;
+  border-radius: 2rem;
+  z-index: 5;
+}
   .button button {
     margin: 1rem 1rem;
     background-color: #fffe00;
@@ -219,25 +220,131 @@ cursor: pointer;
     .right-side {
         margin: 0 auto;
      margin-top: 2em;
-      width: 90%;
-      height: 50vh;
+    
+    width: 90%;
+    height: 45vh;
      
     }
     .mobile{
-        margin-top: 2em;
+      margin-top: 0em;
+      width: 70%;
+      height:97%;
+  }
+  .mobile img {
+    width: auto;
+    height: 73vw;
+    position: relative;
+  }
+  .main-img img {
+    width: auto;
+    height: 67vw;
+    top: 4%;
+    left: 27.5%;
+    border-radius: 5vw;
+  }
+  }
+  @media screen and  (min-width:700px) and (min-height:1000px){
+    .container {
+        width: 100%;
+        max-height: 1080px;
+        height: 80vh;
+    
+        flex-direction: column;
+      }
+      .left-side {
+        width: 95%;
+        height: 40vh;
+        margin: 0 auto;
+      }
+      .exit img {
+        width: 8vw;
+        height: 8vw;
+      }
+      .left-side .line {
+        width: 1.5vw;
+        height: 8vw;
+        border-radius: 1rem;
+        margin: 0 0.5em;
+      }
+      .heading {
         width: 80%;
-        height: 100%;
-    }
-    .mobile img {
-      width: 70vw;
-      height: 73vw;
-      position: relative;
-    }
-    .main-img img {
-      width: 44vw;
-      height: 67vw;
-      top: 7%;
-      left: 24%;
-      border-radius: 5vw;
-    }
+        display: flex;
+        align-items: center;
+        margin-top: 5%;
+      }
+      .head-text h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5em;
+      }
+      .head-para {
+          margin-left: 2em;
+      }
+      .head-para h4{
+          font-size: 2.5rem;
+          margin: 0.2em 0;
+      }
+      .head-para P{
+        font-size: 3vw;
+      }
+      .pellete {
+        width: 80%;
+      }
+      .hex-code span{
+          font-size: 1.5rem;  
+      }
+      .color{
+          width: 5rem;
+          height:5rem;
+      }
+      .details{
+          margin: 0 0;
+      }
+      .details span{
+        font-size: 4vw;
+      }
+      .details p{
+          font-size: 2.2rem;
+    
+      }
+    
+      .right-side {
+      margin: 0 auto;
+       margin-top: 1em;
+        width: 60%;
+        height: 45vh;
+       
+      }
+      .mobile{
+          margin-top: 0em;
+          width: 70%;
+          height:97%;
+      }
+      .mobile img {
+        width: auto;
+        height: 52vw;
+        position: relative;
+      }
+      .main-img img {
+        width: auto;
+        height: 48vw;
+        top: 4%;
+        left: 28%;
+        border-radius: 5vw;
+      }
+      .left-btn img,
+  .right-btn img {
+  width: 4rem;
+  width: 4rem;
+  }
+  .button{
+      width: 100%;
+  }
+    .button button {
+        margin: 3vw 7vw;
+        padding: 2vw 2vw;
+      border-radius: 50px;    
+      height: 14vw;
+      width: 35vw;
+      font-size: 4vw;
+  }
   }
