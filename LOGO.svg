@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="360" viewBox="0 0 360 360">
+  <defs>
+    <linearGradient id="linear-gradient" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#494949"/>
+      <stop offset="1" stop-color="#141414"/>
+    </linearGradient>
+    <filter id="Ellipse_1" x="0" y="0" width="360" height="360" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="35" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_2" x="75" y="60" width="210" height="210" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0ef"/>
+      <stop offset="1" stop-color="#6f0"/>
+    </linearGradient>
+    <filter id="Path_2" x="122" y="120.006" width="67.187" height="99.994" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-3"/>
+      <feFlood flood-opacity="0.749"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_3" x="170.794" y="120" width="67.206" height="100" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4" result="blur-4"/>
+      <feFlood flood-opacity="0.749"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="LOGO" transform="translate(110.217 87.174)">
+    <g transform="matrix(1, 0, 0, 1, -110.22, -87.17)" filter="url(#Ellipse_1)">
+      <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="75" cy="75" r="75" transform="translate(105 90)" fill="url(#linear-gradient)"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -110.22, -87.17)" filter="url(#Ellipse_2)">
+      <g id="Ellipse_2-2" data-name="Ellipse 2" transform="translate(105 90)" fill="none" stroke="#ffe600" stroke-width="5">
+        <circle cx="75" cy="75" r="75" stroke="none"/>
+        <circle cx="75" cy="75" r="72.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_1" data-name="Group 1" transform="translate(23.783 39.826)">
+      <g transform="matrix(1, 0, 0, 1, -134, -127)" filter="url(#Path_2)">
+        <path id="Path_2-2" data-name="Path 2" d="M115.211,133.462H96.4a23.823,23.823,0,0,0-13.229,3.578,19.294,19.294,0,0,0-7.416,8.743,20.961,20.961,0,0,0,0,16.778,19.764,19.764,0,0,0,3.684,5.666,21.863,21.863,0,0,0,3.739,3.122,25.2,25.2,0,0,0,13.229,3.578h4.111c-2.267,1.842-11.035,8.973-17.39,14.3a5.18,5.18,0,1,0,2.3,2.58l23.707-20.3-4.85-.015H96.405q-12.539,0-16.966-10.11a18.281,18.281,0,0,1,0-14.393q4.424-10.11,16.966-10.11H113.23v70.9q0,1.679,1.981,1.679t1.981-1.679v-72.63Q117.193,133.463,115.211,133.462Z" transform="translate(60 -6.45)" fill="url(#linear-gradient-2)"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -134, -127)" filter="url(#Path_3)">
+        <path id="Path_3-2" data-name="Path 3" d="M303.274,170.96v-2.7c-.024-19.176-13.51-34.726-30.177-34.8H261.952a1.521,1.521,0,0,0-1.4.537,2.079,2.079,0,0,0-.466,1.61v71.633a2.233,2.233,0,0,0,.917,1.9,1.657,1.657,0,0,0,1.892,0,2.233,2.233,0,0,0,.917-1.9V137.81H273.1c14.585.085,26.388,13.672,26.455,30.452v2.7a35.826,35.826,0,0,1-1.692,12.331,29.641,29.641,0,0,1-5.074,9.736,22.986,22.986,0,0,1-12.108,7.693,5.084,5.084,0,0,0-5.845-3.521,6.208,6.208,0,0,0,.078,11.737,5.108,5.108,0,0,0,5.8-3.624,27.547,27.547,0,0,0,14.855-9.337,30.088,30.088,0,0,0,5.5-10.727A44.008,44.008,0,0,0,303.274,170.96Z" transform="translate(-77.28 -6.45)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </g>
+  </g>
+</svg>
