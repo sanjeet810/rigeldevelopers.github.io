@@ -543,7 +543,7 @@ input[type="email"]{
 	border-top-right-radius: 8px;
 	border-bottom-left-radius:8px;
 	border: none;
-	box-shadow: 9px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 9px 5px 5px 0px rgba(0, 0, 0, 0.30);
 	}
 	textarea{
 	width: 90%;
@@ -553,12 +553,12 @@ input[type="email"]{
 	border-top-right-radius: 8px;
 	border-bottom-left-radius:8px;
 	border: none;
-	box-shadow: 9px 5px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 9px 5px 5px 0px rgba(0, 0, 0, 0.30);
 	}
 	input[type="submit"]{
 		background-color: #FFFE00  ;
 		color: blue;
-		box-shadow: 9px 5px 5px 0px rgba(0, 0, 0, 0.75);	
+		box-shadow: 9px 5px 5px 0px rgba(0, 0, 0, 0.30);	
 		margin-left:auto;
 		margin-right:auto;
 		width: 5rem;
