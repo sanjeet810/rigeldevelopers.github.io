@@ -6,7 +6,7 @@ html{
 	scroll-behavior: smooth;
 }
 body {
-	font-family: 'Baloo 2', cursive;
+	font-family:Arial, Helvetica, sans-serif;
 	background: linear-gradient(260deg,#090834,#03031a);
 }
 
