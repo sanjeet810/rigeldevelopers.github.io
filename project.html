@@ -17,7 +17,8 @@
         <div class="main-container">
             <div class="heading">
                 <div class="exit">
-                    <a href="/index.html"><img src="/Rigel png/Services/Android/Back.png" alt="exit"></a></div>
+                    <a href="/index.html"> 
+                <img src="/icons_buttons/Back.png" alt="exit"></a></div>
                 <div class="line"><span></span></div>
                 <div class="head-text">
                     <h1>Our Projects</h1>
@@ -40,7 +41,10 @@
                             <p>-ScreenShot Denied</p>
                             <p>-complete Dynamic website</p>
                             <p>-Pefect Responsive website</p>
-                            <a href="/builhiest-web.html"><img src="/Rigel png/Services/Android/Forward.png" alt=""> </a>
+                            <div class="next">
+                                <a href="/builhiest-web.html"><img src="/icons_buttons/Forward.png" alt="next"> </a>
+                            </div>
+                           
                         </div>
                     </div>
                     <div class="swiper-slide" id="school">
@@ -54,7 +58,10 @@
                             <p>-latest Notices</p>
                             <p>-complete Dynamic website</p>
                             <p>-Pefect Responsive website</p>
-                            <a href="/school.html"><img src="/Rigel png/Services/Android/Forward.png" alt=""> </a>
+                            <div class="next">
+                                <a href="/school.html"><img src="/icons_buttons/Forward.png" alt="next"> </a>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="swiper-slide" id="news">
@@ -66,7 +73,10 @@
                             <p>-Free for all</p>
                             <p>-All devices competible app</p>
                             <p>-custom news preferences</p>
-                            <a href="/news.html"><img src="/Rigel png/Services/Android/Forward.png" alt=""> </a>
+                            <div class="next">
+                                <a href="/news.html"><img src="/icons_buttons/Forward.png" alt="next"> </a>
+                            </div>
+                           
                         </div>
                     </div>
                     <div class="swiper-slide" id="dating">
@@ -78,7 +88,10 @@
                             <p>-All devices competible app</p>
                             <p>-User Data Secure</p>
                             <p>-ScreenShot Denied</p>
-                            <a href="/FIL.html"><img src="/Rigel png/Services/Android/Forward.png" alt=""> </a>
+                            <div class="next">
+                                <a href="/FIL.html"><img src="/icons_buttons/Forward.png" alt="next"> </a>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="swiper-slide" id="bildheist">
@@ -89,8 +102,10 @@
                             <p>-Monthly subscription</p>
                             <p>-Download and view within App</p>
                             <p>-All types of Docs Supported</p>
-            
-                            <a href="/b-app.html"><img src="/Rigel png/Services/Android/Forward.png" alt=""> </a>
+                            <div class="next">
+                                <a href="/b-app.html"><img src="/icons_buttons/Forward.png" alt="next"> </a>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -114,6 +129,32 @@
             },
         });
     </script>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script>
+     $(document).bind("contextmenu",function(e){
+   return false;
+     });
+     $(document).bind("keydown",function(e){
+         if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+               return false;
+             }
+         if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+             return false;
+             }
+           
+             if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                 return false;
+             }
+             
+             if (e.ctrlKey && e.keyCode == 85) {
+                 return false;
+             }
+           
+             if (event.keyCode == 123) {
+                  return false;
+             }
+     });
+     </script>
 </body>
 
 </html>
