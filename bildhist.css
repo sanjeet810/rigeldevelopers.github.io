@@ -239,21 +239,20 @@ width: 2rem;
    
   }
   .right-side .left-btn,
-  .right-side .right-btn {
-  margin-top: 0rem;
-  }
-  .left-btn img,
-  .right-btn img { 
-  width: 1.5rem;
-  width: 1.5rem;
-  padding-top: 55vw;
-  }
-  .left-btn img{
-    margin-left: 2rem;
-  }
-  .right-btn img{
-    margin-left: -5rem;
-  }
+    .right-side .right-btn {
+    margin-top: 55vw;
+    }
+    .left-btn img,
+    .right-btn img { 
+    width: 1.5rem;
+    width: 1.5rem;
+    }
+    .left-btn img{
+      margin-left: 2rem;
+    }
+    .right-btn img{
+      margin-left: -3rem;
+    }
    .mobile{ 
       margin-top: 0em;
       width: 100%;
