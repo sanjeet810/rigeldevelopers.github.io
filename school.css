@@ -243,19 +243,18 @@ background-color: #C4C4C4;
     }
     .right-side .left-btn,
     .right-side .right-btn {
-    margin-top: 0rem;
+    margin-top: 55vw;
     }
     .left-btn img,
     .right-btn img { 
     width: 1.5rem;
     width: 1.5rem;
-    margin-top: 55vw;
     }
     .left-btn img{
       margin-left: 2rem;
     }
     .right-btn img{
-      margin-left: -5rem;
+      margin-left: -3rem;
     }
      .mobile{ 
         margin-top: 0em;
